@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator Pro</title>
+    <link rel="stylesheet" href="style.css">
+    </head>
+<body>
+    <div class="bg-animation">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+
+    <div class="container">
+        <div class="calculator">
+            <div class="header">
+                <div class="title">Calculator Pro</div>
+                <button class="theme-toggle" onclick="toggleTheme()">☀️</button>
+            </div>
+            
+            <div class="display">
+                <div class="display-sub" id="expression"></div>
+                <div class="display-main" id="result">0</div>
+            </div>
+            
+            <div class="buttons">
+                <button class="btn clear" onclick="clearAll()">AC</button>
+                <button class="btn clear" onclick="clearEntry()">CE</button>
+                <button class="btn operator" onclick="appendOperator('/')" data-key="/">÷</button>
+                <button class="btn operator" onclick="appendOperator('*')" data-key="*">×</button>
+                <button class="btn function" onclick="appendFunction('sqrt(')" data-key="q">√</button>
+                
+                <button class="btn" onclick="appendNumber('7')" data-key="7">7</button>
+                <button class="btn" onclick="appendNumber('8')" data-key="8">8</button>
+                <button class="btn" onclick="appendNumber('9')" data-key="9">9</button>
+                <button class="btn operator" onclick="appendOperator('-')" data-key="-">−</button>
+                <button class="btn function" onclick="appendFunction('pow(')" data-key="^">x²</button>
+                
+                <button class="btn" onclick="appendNumber('4')" data-key="4">4</button>
+                <button class="btn" onclick="appendNumber('5')" data-key="5">5</button>
+                <button class="btn" onclick="appendNumber('6')" data-key="6">6</button>
+                <button class="btn operator" onclick="appendOperator('+')" data-key="+">+</button>
+                <button class="btn function" onclick="appendFunction('log(')" data-key="l">log</button>
+                
+                <button class="btn" onclick="appendNumber('1')" data-key="1">1</button>
+                <button class="btn" onclick="appendNumber('2')" data-key="2">2</button>
+                <button class="btn" onclick="appendNumber('3')" data-key="3">3</button>
+                <button class="btn function" onclick="appendFunction('sin(')" data-key="s">sin</button>
+                <button class="btn function" onclick="appendFunction('cos(')" data-key="c">cos</button>
+                
+                <button class="btn" onclick="appendNumber('0')" data-key="0">0</button>
+                <button class="btn" onclick="appendNumber('.')" data-key=".">.</button>
+                <button class="btn" onclick="appendOperator('(')" data-key="(">(</button>
+                <button class="btn" onclick="appendOperator(')')" data-key=")">)</button>
+                <button class="btn function" onclick="appendFunction('tan(')" data-key="t">tan</button>
+                
+                <button class="btn equals" onclick="calculate()" data-key="Enter">=</button>
+                <button class="btn function" onclick="appendConstant('π')" data-key="p">π</button>
+                <button class="btn function" onclick="appendConstant('e')" data-key="e">e</button>
+                <button class="btn function" onclick="appendFunction('ln(')" data-key="n">ln</button>
+            </div>
+        </div>
+        
+        <div class="history-panel">
+            <div class="history-title">
+                History
+                <button class="clear-history" onclick="clearHistory()">Clear</button>
+            </div>
+            <div id="history-list">
+                <div class="no-history">No calculations yet</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="first.js"></script>
+    
+    <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9886488925af4da5',t:'MTc1OTQyOTk1Ni4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
